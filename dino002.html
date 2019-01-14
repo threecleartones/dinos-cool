@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dino 2! | Hot or Not? with DINOSAURS!!!</title>
+  <title>Dino 2! | Cool or Not? with DINOSAURS!!!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Eater|Oswald|Coiny" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
-<body>
-  <h1 class="heading">Hot or Not? with DINOSAURS!!!</h1>
-  <img src="images/dino002.jpg" alt="Dino hottie (or nottie)">
+<body class="view-dino">
+  <h1 class="heading">
+    <b>Cool</b> or <b>Not?</b> with <strong>DINOSAURS!!!</strong>
+  </h1>
+  <img class="photo-dino" src="" alt="Dino!">
   <div class="buttons-container">
-    <button id="btnHot001" class="btn hot" type="button">Hot?</button>
+    <button class="btn cool" type="button">Cool?</button>
     <i>or</i>
-    <button id="btnNot001" class="btn not" type="button">Not?</button>
+    <button class="btn not" type="button">Not?</button>
   </div>
   <a class="next-dino hidden" href="dino003.html">Next dino</a>
 
@@ -22,5 +25,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script>
+    $dinoName = "ankylosaurus";
+  </script>
 </body>
 </html>

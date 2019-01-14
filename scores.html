@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Hot or Not? with DINOSAURS!!!</title>
+  <title>Cool or Not? with DINOSAURS!!!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Eater|Oswald|Coiny" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
-<body>
-  <h1 class="heading">Hot or Not? with DINOSAURS!!!</h1>
+<body class="view-score">
+  <h1 class="heading">
+    <b>Cool</b> or <b>Not?</b> with <strong>DINOSAURS!!!</strong>
+  </h1>
   <p>
     Congrats! You completed the quiz! Let's see how you did...
   </p>
   <p>
-    You picked <span class="hot-picks"></span> dinos out of 4.
+    You picked <span class="cool-picks"></span> dino<span class="plural-picks hidden">s</span> out of <span class="total-dinos"></span>:
   </p>
-  <a class="play-again" href="index.html">Play again?</a>
+  <ol class="dino-list"></ol>
+  <p class="did-i-win"></p>
+  <a class="play-again" href="index.html">Try again?</a>
 
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

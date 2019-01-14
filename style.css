@@ -1,3 +1,209 @@
+/*
+COOL OR NOT WITH DINOS STYLES
+............................................................................. */
+/* border-box ftw
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* vars
+............................................................................. */
+:root {
+  --primary-font-family: oswald, sans-serif;
+  --secondary-font-family: coiny, serif;
+  --dino-font-family: eater, sans-serif;
+}
+
+/* typography
+............................................................................. */
+html {
+  font-family: var(--primary-font-family);
+  font-size: 1em;
+}
+
+/* helpers
+............................................................................. */
 .hidden {
-  display: none;
+  display: none !important;  /* okay to use here */
+}
+
+/* page
+............................................................................. */
+body {
+  display: grid;
+  justify-items: center;
+  grid-auto-rows: 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  height: 100vh;
+  padding: 0 1em 1em;
+  margin: 0;
+}
+
+  body.view-intro,
+  body.view-score {
+    display: block;
+    text-align: center;
+  }
+
+/* objects
+............................................................................. */
+.heading {
+  margin: .2em 0 .5em;
+
+  font-size: 4rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.heading b {
+  display: inline-block;
+  transform: rotate(4deg);
+
+  color: #00f;
+  /* text-shadow: 4px 4px 8px #333; */
+  text-shadow: 2px 2px 8px #f00;
+}
+
+.heading b:first-child {
+  transform: rotate(-6deg);
+
+  color: #f60;
+  text-shadow: 1px 1px 10px #00f;
+}
+
+.heading strong {
+  color: #080;
+  font-family: var(--dino-font-family);
+  font-size: 5rem;
+  text-shadow: 6px 6px 8px #444;
+}
+
+  @media screen and (max-width: 768px) {
+    .heading {
+      font-size: 10vw !important;
+    }
+    
+    .heading strong {
+      font-size: 12vw !important;
+    }
+  }
+
+body.view-intro,
+body.view-score {
+  font-size: 2em;
+}
+
+  .body.view-intro p {
+    max-width: 400px;
+
+    font-family: var(--primary-font-family);
+  }
+
+.begin-game,
+.find-out,
+.play-again {
+  font-family: var(--secondary-font-family);
+}
+
+.photo-dino {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0 0 1em;
+}
+
+.buttons-container {
+  display: grid;
+  align-self: flex-end;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  width: 100%;
+  
+  font-family: var(--secondary-font-family);
+}
+
+  @media screen and (max-width: 768px) {
+    .buttons-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.buttons-container .btn {
+  /* resets */
+  border: none;
+  background: none;
+
+  position: relative;
+  padding: .2em 2em;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  outline: none;
+  
+  color: #fff;
+  font-family: var(--secondary-font-family);
+  font-size: 2.4rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+  .buttons-container .btn.cool {
+    margin-left: auto;
+    background: linear-gradient(to top, #a00 0%,#f55 100%);
+  }
+
+  .buttons-container .btn.not {
+    margin-right: auto;
+    background: linear-gradient(to top, #00a 0%,#55f 100%);
+  }
+
+    @media screen and (max-width: 768px) {
+      .buttons-container .btn.cool,
+      .buttons-container .btn.not {
+        margin: 0;
+      }
+    }
+
+  .buttons-container .btn:focus,
+  .buttons-container .btn:hover {
+    top: -2px;
+    left: -2px;
+    box-shadow: 2px 2px 6px 0px #555;
+  }
+
+  .buttons-container .btn:active {
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+  
+    .buttons-container .btn.cool:active {
+      background: linear-gradient(to bottom, #a00 0%,#f55 100%);
+    }
+  
+    .buttons-container .btn.not:active {
+      background: linear-gradient(to bottom, #00a 0%,#55f 100%);
+    }
+
+.buttons-container i {
+  justify-content: flex-start;
+
+  font-size: 3rem;
+}
+
+.find-out {
+  margin: 2em 0 0;
+  font-size: 2em;
+}
+
+.dino-list {
+  display: grid;
+  justify-content: center;
+  text-align: left;
+
+  text-transform: capitalize;
 }
